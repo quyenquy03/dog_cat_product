@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành bài 1</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p>nhập vào số lượng và giá trị</p>
+        <label for="">so luong</label>
+        <input type="text" class="soluong">
+        <label for="">gia</label>
+        <input type="text" class="dongia">
+        <label for="">thanh tien</label>
+        <input type="text" class="thanhtien" disabled>
+    </div>
+    <script>
+        var soluong = document.querySelector('.soluong')
+        var dongia = document.querySelector('.dongia')
+        var thanhtien= document.querySelector('.thanhtien')
+
+        soluong.onchange = function() {
+            if(dongia != "") {
+                thanhtien.value = Number(soluong.value) * Number(dongia.value)
+            }
+        }
+        dongia.onchange = function() {
+            
+            if(soluong != "") {
+                thanhtien.value = Number(soluong.value) * Number(dongia.value)
+            }
+        }
+    </script>
+</body>
+</html>

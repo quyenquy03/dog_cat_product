@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành bài 1</title>
+    <style>
+        .error {
+            display: none;
+            color: red;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <label for="" class="label">số kí tự đã gõ</label>
+        <input type="text" disabled class="quantity"> 
+        <div></div>
+        <p class="error">bạn đã nhập quá số kí tự cho phép</p>
+        <input name="" class="input" type="text"> 
+    </div>
+    <script>
+        var input = document.querySelector('.input')
+        var error = document.querySelector('.error')
+        var quantity = document.querySelector('.quantity')
+
+        input.onkeyup = function(e ) {
+            var soluong = e.target.value.length
+            quantity.value = e.target.value.length
+            if(soluong > 10) {
+                error.style.display = "block"
+            } else {
+                error.style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>

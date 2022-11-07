@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành bài 2</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input class="input1" type="text"> 
+        <button class="tong">+</button>
+        <button class="hieu">-</button>
+        <button class="tich">*</button>
+        <button class="thuong">/</button>
+        <input class="input2" type="text"> =
+        <input class="sum" disabled value="">
+        
+    </div>
+    <script>
+        var input1 = document.querySelector('.input1')
+        var input2 = document.querySelector('.input2')
+        var tong = document.querySelector('.tong')
+        var hieu = document.querySelector('.hieu')
+        var tich = document.querySelector('.tich')
+        var thuong = document.querySelector('.thuong')
+        var result = document.querySelector('.sum')
+        tong.onclick = function() {
+            result.value =Number(input1.value) + Number(input2.value)  
+        }
+        hieu.onclick = function() {
+            result.value =Number(input1.value) - Number(input2.value)  
+        }
+        tich.onclick = function() {
+            result.value =Number(input1.value) * Number(input2.value)  
+        }
+        thuong.onclick = function() {
+            result.value =Number(input1.value) / Number(input2.value)  
+        }
+    </script>
+</body>
+</html>
